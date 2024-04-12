@@ -1,0 +1,7 @@
+@import './variables.scss';
+$prefix-cls: '#{$namespace}-filter';
+
+.#{$prefix-cls} {
+  width: 100%;
+  height: 100%;
+}

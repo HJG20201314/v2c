@@ -1,0 +1,68 @@
+/**
+ element sass var
+ https://github.com/ElementUI/theme-default/blob/master/src/common/var.css
+**/
+@import './variables.scss';
+
+$--border-radius-base: 2px;
+$--tag-border-radius: 2px;
+$--card-border-radius: 2px;
+$--slider-border-radius: 2px;
+$--steps-border-radius: 2px;
+$--msgbox-border-radius: 2px;
+
+$--border-color-base: #d2d2d6;
+$--border-color-hover: $theme;
+
+$--color-primary: $theme;
+$--color-danger: $danger;
+$--color-success: $success;
+$--color-warning: $warning;
+$--color-extra-light-silver: $disable-color;
+
+$--disabled-fill-base: $--color-26;
+$--disabled-color-base: $disable-color;
+$--disabled-border-base: $border-color;
+
+$--font-size-base: 12px;
+$--font-color-base: $--color-21;
+$--font-color-disabled-base: $disable-color;
+
+/* Input */
+$--input-color: #000000;
+$--input-disabled-fill: #ebebed;
+$--input-disabled-border: #d2d2d6;
+$--input-placeholder-color: #999999;
+
+/* Button */
+$--button-disabled-color: #cccccc;
+$--button-disabled-border: $border-color;
+$--button-default-border: $border-color;
+$--button-primary-border: $primary;
+$--button-primary-fill: $primary;
+$--button-success-border: $success;
+$--button-success-fill: $success;
+$--button-warning-border: $warning;
+$--button-warning-fill: $warning;
+$--button-danger-border: $danger;
+$--button-danger-fill: $danger;
+$--button-info-border: $info;
+$--button-info-fill: $info;
+
+/* Table */
+$--table-border: 1px solid #dee2ea;
+$--table-border-color: #dee2ea;
+$--table-font-color: #000000;
+$--table-header-font-color: #4e4a5e;
+$--table-header-background-color: #f6f8fa;
+
+/* icon font path, required */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+@import "element-ui/lib/theme-chalk/index.css";
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  theme: $--color-primary;
+}

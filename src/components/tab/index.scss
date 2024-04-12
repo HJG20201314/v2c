@@ -1,0 +1,80 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-tab';
+
+.#{$prefix-cls} {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e4e7ed;
+  &_scroll {
+    height: 100%;
+    .el-scrollbar__wrap, .el-scrollbar__view {
+      height: 100%;
+    }
+    .el-scrollbar__wrap {
+      overflow: hidden;
+      margin: 0 !important;
+    }
+  }
+  &_main{
+    flex: 1;
+    height: 100%;
+    &-drag {
+      display: flex;
+      height: 100%;
+      width: fit-content;
+      li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0 8px;
+        cursor: default;
+        .el-icon-close {
+          margin-left: 12px;
+          font-size: 12px;
+          border-radius: 50%;
+          &:hover {
+            background-color: #c0c4cc;
+            color: #fff;
+          }
+        }
+      }
+    }
+    &-label {
+      flex: 1;
+      font-size: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &-default {
+      &-is-active {
+        color: #409eff;
+        position: relative;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: #409eff;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+    &-popover {
+      padding: 0;
+      z-index: 1001 !important;
+    }
+  }
+  svg {
+    margin: 0 8px;
+    cursor: pointer;
+    fill: #ccc;
+    &:hover {
+      fill: #006EFF;
+    }
+  }
+}

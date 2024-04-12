@@ -1,0 +1,2 @@
+export const SET_MENU_ACTIVE = 'SET_MENU_ACTIVE'
+export const SET_MENU_OPENS = 'SET_MENU_OPENS'

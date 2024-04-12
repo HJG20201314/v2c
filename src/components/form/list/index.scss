@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-list';
+
+.#{$prefix-cls} {
+  &_filter {
+    padding: 8px 4px;
+    border-bottom: 1px solid #dee2ea;
+  }
+  &_table {
+    padding: 4px;
+  }
+}

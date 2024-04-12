@@ -3,15 +3,27 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+
+const modulesFiles = require.context(
+  './modules',
+  true,
+  /^\.\/[^/]+?(\.js|\/index\.js)$/
+)
+
+const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+  // set './app.js' => 'app'
+  const moduleName = modulePath.replace(
+    /^\.\/([^/]+?)(\.js|\/index\.js)?$/,
+    '$1'
+  )
+  const value = modulesFiles(modulePath)
+  modules[moduleName] = value.default
+  return modules
+}, {})
+
+const store = new Vuex.Store({
+  modules,
 })
+
+export default store
+

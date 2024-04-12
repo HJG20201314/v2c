@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-layout';
+
+.#{$prefix-cls} {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .el-menu {
+    width: 240px;
+    height: 100%;
+  }
+  &_main {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+}
