@@ -1,5 +1,8 @@
 export default function () {
   return {
+    checkAll: false,
+    indeterminate: false,
+    checkList: [],
     filterText: null,
     worker: null,
     tableData: [],

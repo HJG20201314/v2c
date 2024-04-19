@@ -31,5 +31,13 @@ export default {
         ...this.checkboxConfig,
         ...this.checkConfig
       }
+  },
+  /**
+   * 过滤输入框聚焦
+   */
+  filterFocus() {
+    this.$nextTick(() => {
+      this.$refs?.filter?.$refs?.input?.focus()
+    })
   }
 }

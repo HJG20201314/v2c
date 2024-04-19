@@ -1,0 +1,7 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-codeview';
+
+.#{$prefix-cls} {
+  height: 100%;
+  overflow-y: scroll;
+}

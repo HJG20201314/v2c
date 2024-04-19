@@ -5,7 +5,7 @@
  * @param {*} $scopedSlots 具名插槽，允许传递数据
  * @returns 
  */
-export const renderSlots = ($slots, $scopedSlots) => {
+export const renderSlots = ($slots, $scopedSlots, scope = null) => {
   const slots = Object.keys($slots)
   const scopedSlots = Object.keys($scopedSlots)
   return slots.map(slotName => {
@@ -15,7 +15,6 @@ export const renderSlots = ($slots, $scopedSlots) => {
       </template>
     )}}).concat(
     scopedSlots.map(slotName => {
-      const scope = {}
       return (
         <template slot={slotName} slot-scope={scope}>
           {$scopedSlots[slotName](scope)}
@@ -23,3 +22,16 @@ export const renderSlots = ($slots, $scopedSlots) => {
       )
   }))       
 }
+
+ /**
+   * 文字是否超出判断, 追加 title
+   * @param {*} e 
+   */
+export const handleTextOverTitle = (e) => {
+  if (e.target.scrollWidth > e.target.offsetWidth) {
+    e.target.title = e.target.innerText
+  } else {
+    e.target.title = ''
+  }
+}
+

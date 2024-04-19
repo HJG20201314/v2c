@@ -1,0 +1,6 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-code';
+
+.#{$prefix-cls} {
+  height: auto;
+}

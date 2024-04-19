@@ -1,11 +1,18 @@
-
 import { usePrefixClass } from '@/hooks/usePrefixClass'
-// import vcTab from '../components/tab'
-
 import './index.scss'
 
 export default {
   name: 'vcLayout',
+  watch: {
+    menuActive: {
+      handler(val) {
+        console.log('menuActive: ', val)
+        this.$router.push({
+          name: val
+        })
+      }
+    }
+  },
   computed: {
     menuActive: {
       get() {
@@ -19,7 +26,7 @@ export default {
       get() {
         return this.$store.state.menu.menuOpens
       },
-      set(value) { 
+      set(value) {
         this.$store.dispatch('menu/SET_MENU_OPENS', value)
       }
     },
@@ -28,7 +35,7 @@ export default {
     return {
       menuList: [
         {
-          name: '表单控件',
+          name: '表单',
           index: 'form',
           children: [
             {
@@ -38,8 +45,16 @@ export default {
           ],
         },
         {
-          name: 'Tab 控件',
+          name: 'Tab',
           index: 'tab'
+        },
+        {
+          name: '容器',
+          index: 'container'
+        },
+        {
+          name: 'Code',
+          index: 'code'
         }
       ]
     }
@@ -67,22 +82,7 @@ export default {
     }
   },
   render() {
-    const menuList = [
-      {
-        name: '表单控件',
-        index: 'form',
-        children: [
-          {
-            name: '筛选',
-            index: 'formFilter'
-          }
-        ],
-      },
-      {
-        name: 'Tab 控件',
-        index: 'tab'
-      }
-    ]
+    const { menuList } = this
     const { prefixCls } = usePrefixClass('layout')
     return (
       <div class={prefixCls}>

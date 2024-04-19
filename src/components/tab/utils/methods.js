@@ -15,17 +15,6 @@ export default {
       })
   },
   /**
-   * tab 文字是否超出判断, 追加 title
-   * @param {*} e 
-   */
-  handleTabItemMouse(e) {
-    if (e.target.scrollWidth > e.target.offsetWidth) {
-      e.target.title = e.target.innerText
-    } else {
-      e.target.title = ''
-    }
-  },
-  /**
    * 双向绑定
    * @param {*} tab 
    */
@@ -52,7 +41,9 @@ export default {
     this.handleCheck(targetTab)
     this.tabsChange()
   },
-  // tab 拖动
+  /**
+   * tab 拖动
+   */
   tabsChange() {
     this.$emit('tabsChange', this.tabs)
   },
@@ -91,5 +82,5 @@ export default {
         this.scrollTab()
       })
     }
-  }
+  },
 }

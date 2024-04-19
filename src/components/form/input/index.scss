@@ -1,0 +1,52 @@
+@import '@/styles/variables.scss';
+$prefix-cls: '#{$namespace}-input';
+
+.#{$prefix-cls} {
+  &_popover {
+    padding: 0;
+    z-index: 1001 !important;
+    &-history {
+      &_prefix {
+        height: 18px;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #909090;
+        i {
+          cursor: pointer;
+        }
+      }
+      &_list {
+        max-height: 200px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &-item {
+          height: 30px;
+          padding: 0 4px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #000;
+          &-title {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &:hover {
+            background-color: #F8F8F8;
+          }
+          i {
+            cursor: pointer;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

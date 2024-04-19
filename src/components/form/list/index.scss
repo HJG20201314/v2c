@@ -2,11 +2,15 @@
 $prefix-cls: '#{$namespace}-list';
 
 .#{$prefix-cls} {
-  &_filter {
-    padding: 8px 4px;
+  &_header, &_filter {
+    padding: 4px;
     border-bottom: 1px solid #dee2ea;
   }
   &_table {
     padding: 4px;
+  }
+  &_footer {
+    padding: 4px;
+    border-top: 1px solid #dee2ea;
   }
 }

@@ -1,8 +1,8 @@
 export default {
-  name: 'vcFilter',
+  name: 'vcFilterView',
   render() {
     return (
-      <div>123</div>
+      <div>vcFilterView</div>
     )
   }
 }
