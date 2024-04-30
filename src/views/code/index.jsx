@@ -1,4 +1,5 @@
 import { usePrefixClass } from '@/hooks/usePrefixClass'
+import './index.scss'
 
 export default {
   name: 'vcCodeView',

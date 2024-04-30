@@ -13,6 +13,18 @@ const routes = [
     redirect: 'form/filter',
     children: [
       {
+        path: 'tab',
+        component: () => import(/* webpackChunkName: "container */  '@/views/tab'),
+        name: 'tab',
+        meta: { title: 'Tab' }
+      },
+      {
+        path: 'container',
+        component: () => import(/* webpackChunkName: "container */  '@/views/container'),
+        name: 'container',
+        meta: { title: 'Container' }
+      },
+      {
         path: 'code',
         component: () => import(/* webpackChunkName: "code */  '@/views/code'),
         name: 'code',

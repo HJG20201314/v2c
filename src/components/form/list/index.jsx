@@ -7,7 +7,7 @@ import './index.scss'
 export default {
   name: 'vcList',
   ...utils,
-  creatd() {
+  created() {
     this.init()
   },
   render() {
@@ -68,7 +68,8 @@ export default {
               prefix-icon="el-icon-search"
               clearable
               autocomplete="on"
-              onInput={ debounce((val) => this.handleFilter(val), 300) }></vcInput>
+              onInput={debounce((val) => this.handleFilter(val), 300)}>
+              </vcInput>
           </div>)
         }
         <div class={`${prefixCls}_table`}>

@@ -10,8 +10,10 @@ import './styles/public.scss'
 import 'vxe-table/lib/style.css'
 import zhCN from 'vxe-table/lib/locale/lang/zh-CN'
 import installGlobalComponents from '@/components'
+import { api } from '@/api/http.js'
 
 Vue.config.productionTip = false
+Vue.prototype.$http = api
 
 Vue.use(ElementUI)
 

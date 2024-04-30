@@ -17,7 +17,7 @@ export default {
   },
   render() {
     const { prefixCls } = usePrefixClass('input')
-    const { type, historyable, historyList = [], width, $slots = {}, $scopedSlots = {}, $attrs: attrs, $listeners: listeners } = this
+    const { type, historyable, historyList = [], width, $slots = {}, $scopedSlots = {}, $attrs: attrs = {}, $listeners: listeners = {} } = this
     
     return (
       <div class={prefixCls}>
@@ -62,9 +62,9 @@ export default {
                 on={{
                   ...listeners,
                   blur: this.handleBlur
-                }}
+              }}
               >
-                {renderSlots($slots, $scopedSlots)}
+              {renderSlots($slots, $scopedSlots)}
               </el-input>
             </el-popover>) : (<el-input ref="input" v-model={this.currentValue} {...{ attrs }}
               on={{

@@ -3,8 +3,10 @@ export default {
     type: String,
     default: ''
   },
-  disabled: {
-    type: Boolean,
-    default: false
+  cmOptions: {
+    type: Object,
+    default: () => {
+      return {}
+    }
   }
 }

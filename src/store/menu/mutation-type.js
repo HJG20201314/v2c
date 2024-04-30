@@ -1,2 +1,3 @@
 export const SET_MENU_ACTIVE = 'SET_MENU_ACTIVE'
 export const SET_MENU_OPENS = 'SET_MENU_OPENS'
+export const SET_MENU_ISCOllAPSE = 'SET_MENU_ISCOllAPSE'
