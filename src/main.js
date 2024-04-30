@@ -11,6 +11,10 @@ import 'vxe-table/lib/style.css'
 import zhCN from 'vxe-table/lib/locale/lang/zh-CN'
 import installGlobalComponents from '@/components'
 import { api } from '@/api/http.js'
+import clickOutside from '@/directives/click-outside'
+Vue.directive('click-outside', clickOutside)
+import dragDirective from '@/directives/drag-directive'
+Vue.directive('drag-directive', dragDirective)
 
 Vue.config.productionTip = false
 Vue.prototype.$http = api
